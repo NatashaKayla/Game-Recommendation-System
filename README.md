@@ -17,24 +17,24 @@ This project analyzes a video game dataset to uncover patterns in game genres, p
 
 The dataset contains records of video games and their performance across platforms and regions. Below are the descriptions of each feature:
 
-| Feature               | Description                                                              |
-| --------------------- | ------------------------------------------------------------------------ |                                     |
-| **Name**              | The name of the game                                                     |
-| **Platform**          | The platform for which the game was made                                 |
-| **Year\_of\_Release** | The year in which the game was released                                  |
-| **Genre**             | The genre of the game                                                    |
-| **Publisher**         | The game’s publisher                                                     |
-| **NA\_Sales**         | Number of copies sold in North America (millions)                        |
-| **EU\_Sales**         | Number of copies sold in Europe (millions)                               |
-| **JP\_Sales**         | Number of copies sold in Japan (millions)                                |
-| **Other\_Sales**      | Number of copies sold in other countries (millions)                      |
-| **Global\_Sales**     | Total number of copies sold globally (millions)                          |
-| **Critic\_Score**     | Average score given by game critics (0–100)                              |
-| **Critic\_Count**     | Number of game critics that reviewed the game                            |
-| **User\_Score**       | Average score given by users (0–10)                                      |
-| **User\_Count**       | Number of users playing the game                                         |
-| **Developer**         | The game’s developer                                                     |
-| **Rating**            | The ESRB categorization (e.g., E = Everyone, T = Teen, M = Mature, etc.) |
+| Feature               | Description                                  |
+| --------------------- | -------------------------------------------- |
+| **Name**              | Game title                                   |
+| **Platform**          | The platform for which the game was made     |
+| **Year\_of\_Release** | Year the game was released                   |
+| **Genre**             | Primary genre (e.g., Action, Sports, Puzzle) |
+| **Publisher**         | Game publisher                               |
+| **NA\_Sales**         | Number of copies sold in North America       |
+| **EU\_Sales**         | Number of copies sold in Europe              |
+| **JP\_Sales**         | Number of copies sold in Japan               |
+| **Other\_Sales**      | Number of copies sold in other countries     |
+| **Global\_Sales**     | Total worldwide sales                        |
+| **Critic\_Score**     | Score from professional critics              |
+| **Critic\_Count**     | Number of critic reviews                     |
+| **User\_Score**       | Average score given by users                 |
+| **User\_Count**       | Number of user ratings                       |
+| **Developer**         | Developer name                               |
+| **Rating**            | ESRB rating (e.g., E, T, M)                  |
 
 ---
 
