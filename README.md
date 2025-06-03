@@ -15,26 +15,26 @@ This project analyzes a video game dataset to uncover patterns in game genres, p
 
 ## 🧾 Dataset Description
 
-The dataset contains information on video games and their performance across different markets. Key features include:
+The dataset contains records of video games and their performance across platforms and regions. Below are the descriptions of each feature:
 
-| Feature               | Description                                  |
-| --------------------- | -------------------------------------------- |
-| **Name**              | Game title                                   |
-| **Platform**          | Gaming platform (e.g., PS2, X360, PC)        |
-| **Year\_of\_Release** | Year the game was released                   |
-| **Genre**             | Primary genre (e.g., Action, Sports, Puzzle) |
-| **Publisher**         | Game publisher                               |
-| **NA\_Sales**         | Sales in North America (in millions)         |
-| **EU\_Sales**         | Sales in Europe                              |
-| **JP\_Sales**         | Sales in Japan                               |
-| **Other\_Sales**      | Sales in other regions                       |
-| **Global\_Sales**     | Total worldwide sales                        |
-| **Critic\_Score**     | Score from professional critics              |
-| **Critic\_Count**     | Number of critic reviews                     |
-| **User\_Score**       | Average user score                           |
-| **User\_Count**       | Number of user ratings                       |
-| **Developer**         | Developer name                               |
-| **Rating**            | ESRB rating (e.g., E, T, M)                  |
+| Feature               | Description                                                              |
+| --------------------- | ------------------------------------------------------------------------ |                                     |
+| **Name**              | The name of the game                                                     |
+| **Platform**          | The platform for which the game was made                                 |
+| **Year\_of\_Release** | The year in which the game was released                                  |
+| **Genre**             | The genre of the game                                                    |
+| **Publisher**         | The game’s publisher                                                     |
+| **NA\_Sales**         | Number of copies sold in North America (millions)                        |
+| **EU\_Sales**         | Number of copies sold in Europe (millions)                               |
+| **JP\_Sales**         | Number of copies sold in Japan (millions)                                |
+| **Other\_Sales**      | Number of copies sold in other countries (millions)                      |
+| **Global\_Sales**     | Total number of copies sold globally (millions)                          |
+| **Critic\_Score**     | Average score given by game critics (0–100)                              |
+| **Critic\_Count**     | Number of game critics that reviewed the game                            |
+| **User\_Score**       | Average score given by users (0–10)                                      |
+| **User\_Count**       | Number of users playing the game                                         |
+| **Developer**         | The game’s developer                                                     |
+| **Rating**            | The ESRB categorization (e.g., E = Everyone, T = Teen, M = Mature, etc.) |
 
 ---
 
@@ -78,6 +78,37 @@ The analysis focused on visualizing data distributions and uncovering patterns:
 * Mature genres like **Shooter and Action** are often rated **T** or **M**
 * **Need for Speed: Most Wanted** is among the most popular titles
 * **LEGO** and **FIFA** franchises show consistent popularity across the dataset
+
+---
+
+Terima kasih! Kalau begitu, mari kita tambahkan **bagian baru di README** yang menjelaskan proses **modeling yang kamu lakukan** secara ringkas dan profesional, sesuai dengan pendekatan yang kamu pakai: **content-based filtering dengan TF-IDF dan cosine similarity**.
+
+Berikut ini adalah bagian baru yang bisa langsung ditambahkan di README:
+
+---
+
+## 🧠 Recommendation System Modeling
+
+To move beyond EDA, a simple **content-based recommendation system** was implemented to suggest similar games based on their textual features.
+
+### ✅ Approach Used
+
+1. **Content-Based Filtering**
+   Games are recommended based on similarity in their metadata — such as genre, platform, publisher, and other descriptive features.
+
+2. **TF-IDF Vectorization**
+   The textual data (especially the `Genre`, `Publisher`, and possibly `Name`) was transformed using **TF-IDF (Term Frequency-Inverse Document Frequency)** to numerically represent game content in a meaningful way.
+
+3. **Cosine Similarity Calculation**
+   Pairwise cosine similarity was computed between all TF-IDF vectors to measure how "similar" each game is to the others.
+
+4. **Recommendation Function**
+   A custom function was built to return the **top 5 similar games** given a specific game title. This function:
+
+   * Takes a game name as input
+   * Retrieves the corresponding TF-IDF vector
+   * Calculates similarity with all other games
+   * Returns the top matches sorted by similarity score
 
 ---
 
