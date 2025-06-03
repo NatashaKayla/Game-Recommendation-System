@@ -91,8 +91,6 @@ Berikut ini adalah bagian baru yang bisa langsung ditambahkan di README:
 
 To move beyond EDA, a simple **content-based recommendation system** was implemented to suggest similar games based on their textual features.
 
-### ✅ Approach Used
-
 1. **Content-Based Filtering**
    Games are recommended based on similarity in their metadata — such as genre, platform, publisher, and other descriptive features.
 
